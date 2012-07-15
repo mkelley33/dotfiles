@@ -35,6 +35,20 @@ alias cpip="ifconfig \
 | cut -c 6- \
 | xargs -I {} echo {}:'3000' \
 | pbcopy"
+alias cpdate="date|pbcopy"
+alias cptime="date +'%r'|pbcopy"
+alias cpsdate="date +'%Y-%m-%d'|pbcopy"
+alias kcmd="echo '⌘'|pbcopy"
+alias kshift="echo '⇧'|pbcopy"
+alias kopt="echo '⌥'|pbcopy"
+
+# Useful for when you need to SSH into a server and want to edit some files
+# using vim but don't want to screw up spacing consistency.
+# :set ts=2 sw=2 expandtab ai | pbcopy"
+
+alias lss="ls -lahF"
+# Run tests specifying that test environment be used.
+alias stt="rake RAILS_ENV=test"
 
 source ~/.bashrc
 source ~/.git-completion.bash
