@@ -1,0 +1,7 @@
+.idea
+*.diff
+.*un~
+.DS_Store
+*.swp
+.netrwhist
+
