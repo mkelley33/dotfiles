@@ -19,16 +19,14 @@ for dotfile in "${dotfiles[@]}"
 do
   if [ -L ${dotfile} ]; then
     echo "Not created: symlink ${dotfile} already exists!"
+    continue
   elif [ -f ${dotfile} ]; then
     dotfile_old="${dotfile}.`date +%m%d%y-%H-%M-%S`"
     echo "File: ${dotfile} already exists!\n"
     echo "Renaming to ${dotfile_old}"
     mv $dotfile $dotfile_old
-    echo "Creating ${dotfile} symlink\n"
-    ln -s $DOTFILES_PATH/$dotfile
-  else
-    echo "Creating ${dotfile} symlink"
-    ln -s $DOTFILES_PATH/$dotfile
   fi
+  echo "Creating ${dotfile} symlink\n"
+  ln -s $DOTFILES_PATH/$dotfile
 done
 echo "\n"
