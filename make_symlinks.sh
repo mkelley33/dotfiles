@@ -14,18 +14,22 @@ fi
 
 dotfiles=(".bashrc" ".profile" ".zshrc")
 
+echo "\n"
 for dotfile in "${dotfiles[@]}"
 do
-  if [ -f ${dotfile} ]; then
-    dotfile_old="${dotfile}.`date +%m%d%y-%H-%M-%S`"
-    echo "\nFile: ${dotfile} already exists!"
-    echo "Renaming to ${dotfile_old}"
-    mv $dotfile $dotfile_old
-    echo "Creating ${dotfile} symlink"
-    ln -s $DOTFILES_PATH/$dotfile
-  elif [ -L ${dotfile} ]; then
+  if [ -L ${dotfile} ]; then
     echo "Symlink ${dotfile} already exists!\n"
     echo "Symlink ${dotfile} not created!\n"
+  elif [ -f ${dotfile} ]; then
+    dotfile_old="${dotfile}.`date +%m%d%y-%H-%M-%S`"
+    echo "File: ${dotfile} already exists!\n"
+    echo "Renaming to ${dotfile_old}"
+    mv $dotfile $dotfile_old
+    echo "Creating ${dotfile} symlink\n"
+    ln -s $DOTFILES_PATH/$dotfile
+  else
+    echo "Creating ${dotfile} symlink"
+    ln -s $DOTFILES_PATH/$dotfile
   fi
 done
 echo "\n"
