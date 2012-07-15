@@ -18,8 +18,7 @@ echo "\n"
 for dotfile in "${dotfiles[@]}"
 do
   if [ -L ${dotfile} ]; then
-    echo "Symlink ${dotfile} already exists!\n"
-    echo "Symlink ${dotfile} not created!\n"
+    echo "Not created: symlink ${dotfile} already exists!"
   elif [ -f ${dotfile} ]; then
     dotfile_old="${dotfile}.`date +%m%d%y-%H-%M-%S`"
     echo "File: ${dotfile} already exists!\n"
