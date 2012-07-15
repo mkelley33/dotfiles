@@ -12,4 +12,3 @@ else
   git config --global user.email $GIT_EMAIL
   echo "user.email is now ${GIT_EMAIL}"
 fi
-export $GIT_EMAIL=''
