@@ -12,7 +12,7 @@ if [ $PWD = $DOTFILES_PATH ]; then
   return
 fi
 
-dotfiles=(".bashrc" ".profile" ".zshrc" ".bash_login" ".gitconfig")
+dotfiles=(".bashrc" ".profile" ".zshrc" ".bash_login" ".gitconfig" ".git-completion.bash")
 
 echo "\n"
 for dotfile in "${dotfiles[@]}"
