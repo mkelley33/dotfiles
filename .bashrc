@@ -28,7 +28,7 @@ export VISUAL=vim
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # http://github.com/aziz/tmuxinator
-source $HOME/bin/tmuxinator.bash
+#source $HOME/bin/tmuxinator.bash
 
 # Append instead of overwriting bash_history
 shopt -s histappend
