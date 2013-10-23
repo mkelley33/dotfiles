@@ -1,0 +1,29 @@
+# ~/.tmuxinator/katello.yml
+
+name: katello
+root: ~/projects/team_headpin/katello/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre:
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: rvm use 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - vim:
+      layout: main-vertical
+      panes:
+        - vim
+  - vpn: rh_vpn
+  - irc: weechat-curses
+  - console: rails console development
+  - server: RAILS_RELATIVE_URL_ROOT=/katello rails server webrick -e development
+  - logs: tail -f logs/development.log
+  - notes: vim ~/notes.md
+  - cmd: cd
