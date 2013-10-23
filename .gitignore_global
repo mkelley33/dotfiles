@@ -1,14 +1,14 @@
-*.diff
-.*un~
-*.swp
+*.s[a-w][a-z]
+*.un~
+Session.vim
 .netrwhist
+*~
 
 # RubyMine workspace
 .idea
 .idea/workspace.xml
 
 # OS X
-#
 .DS_Store
 .AppleDouble
 .LSOverride
