@@ -1,0 +1,12 @@
+startup_message off
+
+# Can't recall why this was necesary for remote pairing? Ask Edward.
+shell -${SHELL}
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+term "xterm-256color"
