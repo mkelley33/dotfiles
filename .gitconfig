@@ -44,3 +44,5 @@
 	gst = git status
 [mergetool]
   keepBackup = true
+[push]
+	default = matching
