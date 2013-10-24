@@ -34,3 +34,5 @@ export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s histappend
 
 alias gst="git status"
+
+eval $(ssh-agent)
