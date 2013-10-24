@@ -33,3 +33,4 @@ export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 # Append instead of overwriting bash_history
 shopt -s histappend
 
+alias gst="git status"
