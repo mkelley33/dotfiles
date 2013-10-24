@@ -33,10 +33,4 @@ source $HOME/bin/tmuxinator.bash
 # Append instead of overwriting bash_history
 shopt -s histappend
 
-# logging for tmux
-if [[ $TERM = "screen" ]] && [[ $(ps -p $PPID -o comm=) = "tmux" ]]; then
-logname="$(date '+%d.%m.%Y_%H:%M:%S').tmux.log"
-mkdir $HOME/logs 2> /dev/null
-script -f $HOME/logs/${logname}
-exit
-fi
+alias gst="git status"

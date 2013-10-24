@@ -41,5 +41,6 @@
   diverges = !sh -c 'git rev-list --boundary $1...$2 | grep ^- | cut -c2-'
   oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
   conflicts = !git ls-files -u | cut -f 2 | sort -u
+	gst = git status
 [mergetool]
   keepBackup = true
