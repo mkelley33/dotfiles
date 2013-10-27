@@ -34,3 +34,12 @@ export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 shopt -s histappend
 
 alias gst="git status"
+
+# redcarpet, pygments.rb throw many UTF-8 conversion errors without this.
+# redcarpet still throws one: unable to convert "\xD0" from ASCII-8BIT to UTF-8 for lib/redcarpet.so, skipping
+# see SO post: http://stackoverflow.com/questions/4975973/gem-update-unable-to-convert-xe7-to-utf-8-in-conversion-from-ascii-8bit-to-u
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+unset LC_ALL
+
+
