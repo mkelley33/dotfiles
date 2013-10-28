@@ -18,6 +18,7 @@ alias rh_vpn="sudo openvpn --config ~/ovpn-phx2-tcp-x86-64.conf"
 # export JAVA_HOME=/etc/alternatives/java
 
 export HISTSIZE=100000
+export HISTCONTROL=ignoredups:ignorespace
 export TERM=xterm-256color
 export EDITOR=vim
 export VISUAL=vim
