@@ -10,7 +10,10 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin:/etc/alternatives
 
-alias kat="RAILS_RELATIVE_URL_ROOT=/katello rails server thin"
+alias kat-thin="RAILS_RELATIVE_URL_ROOT=/katello rails server thin"
+alias kat-wr=""
+alias kat-pdn="cd ~/notes/projects/katello && vim primary-dev-notes.mdown"
+
 alias rh_vpn="sudo openvpn --config ~/ovpn-phx2-tcp-x86-64.conf"
 
 # oracle vs linux -> verdict: oracle sucks
@@ -43,4 +46,4 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 unset LC_ALL
 
-
+alias dotfiles="cd ~/projects/dotfiles"
