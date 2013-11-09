@@ -79,7 +79,6 @@ set formatoptions-=o
 
 set list
 set lcs=tab:▸\ ,eol:¬
-set lcs=trail:-
 
 filetype plugin on
 set nu
