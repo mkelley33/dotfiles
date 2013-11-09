@@ -13,6 +13,7 @@ PATH=$PATH:$HOME/.rvm/bin:/etc/alternatives
 alias kat-thin="RAILS_RELATIVE_URL_ROOT=/katello rails server thin"
 alias kat-wr=""
 alias kat-pdn="cd ~/notes/projects/katello && vim primary-dev-notes.mdown"
+alias kat-kre="cd ~/projects/katello-reports-engine/"
 
 alias rh_vpn="sudo openvpn --config ~/ovpn-phx2-tcp-x86-64.conf"
 
@@ -39,8 +40,6 @@ shopt -s histappend
 
 alias gst="git status"
 alias gco="git checkout"
-
-alias ktre="cd ~/projects/katello-reports-engine/"
 
 # redcarpet, pygments.rb throw many UTF-8 conversion errors without this.
 # redcarpet still throws one: unable to convert "\xD0" from ASCII-8BIT to UTF-8 for lib/redcarpet.so, skipping
